@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Recipe Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🍳 Recipe Finder</h1>
+</header>
+
+<section class="hero">
+
+<h2>Find Delicious Recipes Instantly</h2>
+<p>Search thousands of recipes from around the world</p>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search recipes...">
+<button onclick="searchRecipe()">Search</button>
+</div>
+
+<div class="categories">
+
+<button onclick="quickSearch('Chicken')">🍗 Chicken</button>
+
+<button onclick="quickSearch('Noodles')">🥩 Noodles</button>
+
+<button onclick="quickSearch('Seafood')">🍤 Seafood</button>
+
+<button onclick="quickSearch('Pasta')">🍝 Pasta</button>
+
+<button onclick="quickSearch('Cake')">🍰 Dessert</button>
+
+<button onclick="quickSearch('Indian')">🍛 Indian</button>
+
+
+</div>
+
+</section>
+
+<section class="recipes-section">
+
+<h2 class="results-title">Recipes</h2>
+
+<div id="recipes"></div>
+
+</section>
+<!-- Recipe Popup -->
+
+<div id="recipeModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2 id="mealTitle"></h2>
+
+<img id="mealImg">
+
+<h3>Ingredients</h3>
+
+<ul id="ingredients"></ul>
+
+<a id="videoLink" target="_blank" class="watch-btn">▶ Watch Recipe Video</a>
+
+</div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
